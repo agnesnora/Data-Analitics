@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { HiArrowNarrowRight, HiMenu } from "react-icons/hi";
 function App() {
+  const Toggle = () => {
+    console.log("cili");
+  };
   return (
     <>
       <div className="container">
         <header className="header">
-          <HiMenu className="header--icon" />
+          <button className="menu--btn" onClick={Toggle}>
+            <HiMenu className="header--icon" />
+          </button>
+
           <h1 className="logo">Logo</h1>
         </header>
         <div>

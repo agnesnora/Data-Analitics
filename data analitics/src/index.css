@@ -22,6 +22,7 @@
   line-height: 1;
   color: #fff;
   margin-bottom: 0;
+  margin-top: 15rem;
 }
 
 h2 {
@@ -33,18 +34,11 @@ h2 {
   line-height: 111%;
 }
 
-button {
+.menu--btn {
   background-color: transparent;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-  /* width: 223px; */
-  letter-spacing: 0.05rem;
-  font-size: 1.125rem;
-  padding: 1.25rem 1.5rem;
-  margin-top: 2.875rem;
-  border: solid 1px #4d4d4d;
+  border: none;
+  justify-self: left;
+  cursor: pointer;
 }
 .icon {
   color: #fff;
@@ -56,12 +50,24 @@ button {
 .go--btn {
   display: flex;
   align-items: center;
+  background-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  letter-spacing: 0.05rem;
+  font-size: 1.125rem;
+  padding: 1.25rem 1.5rem;
+  margin-top: 2.875rem;
+  border: solid 1px #4d4d4d;
 }
 
 header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  margin-bottom: 0;
+  padding-top: 1rem;
 }
 .header--icon {
   grid-column: span 1;
@@ -75,4 +81,6 @@ header {
   font-weight: 800;
   letter-spacing: -2.88px;
   line-height: 111%;
+  margin-bottom: 0;
+  margin-top: 0;
 }
