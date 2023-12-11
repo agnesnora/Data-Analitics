@@ -108,7 +108,7 @@ li:hover {
   background-color: #00a3ff;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .container {
     display: FLEX;
     margin-left: 0;
@@ -129,7 +129,7 @@ li:hover {
   ul {
     width: 213px;
     border-radius: 13px 0 0 13px;
-    padding: 3.125rem 0 0 1.75rem;
+    padding-top: 3.125rem;
   }
   .logo {
     margin-top: 3.125rem;

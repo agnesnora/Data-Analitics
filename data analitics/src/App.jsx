@@ -9,7 +9,7 @@ function App() {
   };
 
   const handleResize = () => {
-    window.innerWidth > 600 ? setMenuOn(true) : setMenuOn(false);
+    window.innerWidth > 750 ? setMenuOn(true) : setMenuOn(false);
   };
 
   const marginTopStyle = {
@@ -17,7 +17,7 @@ function App() {
   };
   const backGroundStyle = {
     backgroundImage:
-      window.innerWidth <= 600
+      window.innerWidth <= 750
         ? 'url("/rectangle.png")'
         : ' url("/Rectangle1.png")',
   };
@@ -31,8 +31,8 @@ function App() {
   return (
     <>
       <div className="container" style={backGroundStyle}>
-        {window.innerWidth > 600 ? <Menu /> : null}
-        {window.innerWidth <= 600 ? (
+        {window.innerWidth > 750 ? <Menu /> : null}
+        {window.innerWidth <= 750 ? (
           <header className="header">
             <button className="menu--btn" onClick={Toggle}>
               <HiMenu className="header--icon" />
@@ -42,9 +42,9 @@ function App() {
           </header>
         ) : null}
         <div className="content--container">
-          {menuOn && Menu.innerWidth <= 600 ? <Menu /> : null}
+          {menuOn && Menu.innerWidth <= 750 ? <Menu /> : null}
           <div>
-            {window.innerWidth > 600 ? <h1 className="logo">Logo</h1> : null}
+            {window.innerWidth > 750 ? <h1 className="logo">Logo</h1> : null}
             <h1 className="main--title" style={marginTopStyle}>
               Data Analytics
             </h1>
