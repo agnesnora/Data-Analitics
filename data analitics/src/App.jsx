@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { HiArrowNarrowRight, HiMenu } from "react-icons/hi";
+import Menu from "./Menu";
 function App() {
+  const [menuOn, setMenuOn] = useState(false);
   const Toggle = () => {
-    console.log("cili");
+    setMenuOn((prevMenu) => !prevMenu);
+  };
+  const marginTopStyle = {
+    marginTop: menuOn ? "2.5rem" : "15rem",
   };
   return (
     <>
@@ -14,8 +19,11 @@ function App() {
 
           <h1 className="logo">Logo</h1>
         </header>
+        {menuOn ? <Menu /> : null}
         <div>
-          <h1 className="main--title">Data Analytics</h1>
+          <h1 className="main--title" style={marginTopStyle}>
+            Data Analytics
+          </h1>
           <h2>
             Making sense of <br />
             your traffic

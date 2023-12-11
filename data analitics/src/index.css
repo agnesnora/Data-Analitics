@@ -84,3 +84,26 @@ header {
   margin-bottom: 0;
   margin-top: 0;
 }
+
+li {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  list-style: none;
+  line-height: 111%;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 1rem;
+  display: block;
+  width: 30%;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+button:hover,
+li:hover {
+  background-color: #00a3ff;
+}
