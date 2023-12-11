@@ -15,6 +15,12 @@ function App() {
   const marginTopStyle = {
     marginTop: menuOn ? "2.5rem" : "15rem",
   };
+  const backGroundStyle = {
+    backgroundImage:
+      window.innerWidth <= 600
+        ? 'url("/rectangle.png")'
+        : ' url("/Rectangle1.png")',
+  };
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -24,30 +30,34 @@ function App() {
   }, []);
   return (
     <>
-      <div className="container">
-        <header className="header">
-          {window.innerWidth <= 600 ? (
-            <button className="menu--btn" onClick={Toggle} disabled={false}>
+      <div className="container" style={backGroundStyle}>
+        {window.innerWidth > 600 ? <Menu /> : null}
+        {window.innerWidth <= 600 ? (
+          <header className="header">
+            <button className="menu--btn" onClick={Toggle}>
               <HiMenu className="header--icon" />
             </button>
-          ) : null}
 
-          <h1 className="logo">Logo</h1>
-        </header>
-        {menuOn ? <Menu /> : null}
-        <div>
-          <h1 className="main--title" style={marginTopStyle}>
-            Data Analytics
-          </h1>
-          <h2>
-            Making sense of <br />
-            your traffic
-          </h2>
+            <h1 className="logo">Logo</h1>
+          </header>
+        ) : null}
+        <div className="content--container">
+          {menuOn && Menu.innerWidth <= 600 ? <Menu /> : null}
+          <div>
+            {window.innerWidth > 600 ? <h1 className="logo">Logo</h1> : null}
+            <h1 className="main--title" style={marginTopStyle}>
+              Data Analytics
+            </h1>
+            <h2>
+              Making sense of <br />
+              your traffic
+            </h2>
 
-          <button className="go--btn">
-            {" "}
-            <HiArrowNarrowRight className="icon" /> Go to my stats
-          </button>
+            <button className="go--btn">
+              {" "}
+              <HiArrowNarrowRight className="icon" /> Go to my stats
+            </button>
+          </div>
         </div>
       </div>
     </>
