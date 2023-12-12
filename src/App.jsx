@@ -11,15 +11,15 @@ function App() {
   };
 
   const handleResize = () => {
-    window.innerWidth > 750 ? setMenuOn(true) : setMenuOn(false);
+    window.innerWidth > 1000 ? setMenuOn(true) : setMenuOn(false);
   };
 
-  const marginTopStyle = {
-    marginTop: menuOn ? "2.5rem" : "15rem",
-  };
+  // const marginTopStyle = {
+  //   marginTop: menuOn ? "2.5rem" : "15rem",
+  // };
   const backGroundStyle = {
     backgroundImage:
-      window.innerWidth <= 750
+      window.innerWidth <= 1000
         ? 'url("/rectangle.png")'
         : ' url("/Rectangle1.png")',
   };
@@ -33,8 +33,8 @@ function App() {
   return (
     <>
       <div className="container" style={backGroundStyle}>
-        {window.innerWidth > 750 ? <Menu /> : null}
-        {window.innerWidth <= 750 ? (
+        {window.innerWidth > 1000 ? <Menu /> : null}
+        {window.innerWidth <= 1000 ? (
           <header className="header">
             <button className="menu--btn" onClick={Toggle}>
               <HiMenu className="header--icon" />
@@ -44,12 +44,12 @@ function App() {
           </header>
         ) : null}
         <div className="content--container">
-          {menuOn && window.innerWidth <= 750 ? <Menu /> : null}
+          {menuOn && window.innerWidth <= 1000 ? (
+            <Menu setMenuOn={setMenuOn} arrow={HiArrowNarrowRight} />
+          ) : null}
           <div>
-            {window.innerWidth > 750 ? <h1 className="logo">Logo</h1> : null}
-            <h1 className="main--title" style={marginTopStyle}>
-              Data Analytics
-            </h1>
+            {window.innerWidth > 1000 ? <h1 className="logo">Logo</h1> : null}
+            <h1 className="main--title">Data Analytics</h1>
             <h2>
               Making sense of <br />
               your traffic
