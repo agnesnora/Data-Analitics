@@ -6,9 +6,6 @@ export default function Menu({ setMenuOn }) {
   };
   return (
     <ul className="menu--container">
-      {/* {window.innerWidth > 1000 ? (
-        <li style={{ backgroundColor: "#2485FF" }}>menu</li>
-      ) : null} */}
       {window.innerWidth <= 1000 ? (
         <button onClick={goBack} className="back--btn">
           <HiArrowNarrowLeft />

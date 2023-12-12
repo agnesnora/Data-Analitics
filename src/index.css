@@ -33,7 +33,8 @@
   transition: transform 0.3s;
 }
 .back--btn:hover {
-  transform: translateX(6px);
+  transform: translateX(-6px);
+  background-color: transparent;
 }
 h2 {
   font-weight: 275;
@@ -105,19 +106,23 @@ li {
   font-size: 1rem;
   padding: 1rem 1rem 1rem 2rem;
   display: block;
-  width: 80%;
+
+  cursor: pointer;
 }
 
 ul {
   padding-left: 0;
   margin: 0;
-  max-width: 300px;
+  width: 200px;
+}
+.go--btn:hover {
+  background-color: #00a3ff;
 }
 
-button:hover,
 li:hover {
   background-color: #4d4d4d;
 }
+
 .menu--container {
   position: fixed;
   z-index: 1;
