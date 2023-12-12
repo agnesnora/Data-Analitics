@@ -6,6 +6,7 @@ function App() {
   // const [windowWidth, setWindowWidth] = window.innerWidth;
   const Toggle = () => {
     setMenuOn((prevMenu) => !prevMenu);
+    console.log(menuOn);
   };
 
   const handleResize = () => {
@@ -42,7 +43,7 @@ function App() {
           </header>
         ) : null}
         <div className="content--container">
-          {menuOn && Menu.innerWidth <= 750 ? <Menu /> : null}
+          {menuOn && window.innerWidth <= 750 ? <Menu /> : null}
           <div>
             {window.innerWidth > 750 ? <h1 className="logo">Logo</h1> : null}
             <h1 className="main--title" style={marginTopStyle}>
