@@ -86,6 +86,7 @@ header {
   color: #fff;
 }
 .logo {
+  text-align: center;
   text-transform: uppercase;
   color: #2d7dff;
   font-size: 1.5rem;
@@ -132,21 +133,33 @@ li:hover {
   height: 100vh;
   max-width: 300px;
 }
+
 @media (min-width: 1000px) {
   .container {
     display: FLEX;
     margin-left: 0;
     padding: 0;
     margin: 4.56rem;
+    height: 90vh;
   }
   .content--container {
     display: flex;
     padding-left: 5rem;
   }
+  .main--title {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  .logo {
+    text-align: left;
+  }
   .menu--container {
     position: unset;
     background-color: #2c2931;
     width: 300px;
+    height: 90vh;
   }
   :root {
     background: linear-gradient(252deg, #bd00ff 5.28%, #00a3ff 98.3%);
