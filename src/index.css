@@ -22,7 +22,7 @@
   line-height: 1;
   color: #fff;
   margin-bottom: 0;
-  margin-top: 15rem;
+  margin-top: 8rem;
 }
 .back--btn {
   background-color: transparent;
@@ -36,6 +36,9 @@
 .back--btn:hover {
   transform: translateX(-6px);
   background-color: transparent;
+}
+.content--container {
+  margin-bottom: 2rem;
 }
 h2 {
   font-weight: 275;
