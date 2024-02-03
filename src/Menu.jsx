@@ -1,4 +1,5 @@
 import { HiArrowNarrowLeft } from "react-icons/hi";
+import "../src/Styles/MenuStyles/Menu.css";
 
 export default function Menu({ setMenuOn }) {
   const goBack = () => {

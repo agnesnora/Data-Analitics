@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { HiArrowNarrowRight, HiMenu } from "react-icons/hi";
-
+import "../src/Styles/AppStyles/App.css";
 import Menu from "./Menu";
 function App() {
   const [menuOn, setMenuOn] = useState(false);
@@ -48,7 +48,9 @@ function App() {
             <Menu setMenuOn={setMenuOn} arrow={HiArrowNarrowRight} />
           ) : null}
           <div>
-            {window.innerWidth > 1000 ? <h1 className="logo">Logo</h1> : null}
+            {window.innerWidth > 1000 ? (
+              <h1 className="logo--wide">Logo</h1>
+            ) : null}
             <h1 className="main--title">Data Analytics</h1>
             <h2>
               Making sense of <br />
